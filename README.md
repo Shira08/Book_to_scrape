@@ -3,9 +3,8 @@
 ### - first take books informations from [Books to scrap site ](https://books.toscrape.com/index.html) and put them in different excel file
 ### - secondly download images of each book and put in a folder per category  
 
-# **Specification to run this project**
 > [!Important]
-> Key information users need to know to achieve their goal.
+> Specification to run this project
 
 -[ ] Install python in your machine accordingly to your system. Click to find [Windows](https://www.python.org/downloads/windows/) 
 -[ ] Install Beautifulsoup4 using **pip install beautifulsoup4**
