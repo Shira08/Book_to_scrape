@@ -15,4 +15,5 @@
 > - [ ] Install requests using **pip install requests**
 >       The requests library in Python is a popular and easy-to-use HTTP library that allows
 >       you to send HTTP requests and interact with web services.
+> - [ ] Make sur you are in the project folder and run **python book_to_scrape.py** if python3 do **python3 book_to_scrape.py**
 
