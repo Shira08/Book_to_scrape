@@ -4,7 +4,7 @@
 ### - secondly download images of each book and put in a folder per category  
 
 > [!Important]
-> ##Specification to run this project
+> ## Specification to run this project
 > - [ ] Install python in your machine accordingly to your system. Click to find [Windows](https://www.python.org/downloads/windows/) 
 > - [ ] Install Beautifulsoup4 using **pip install beautifulsoup4**
 >       Beautifulsoup is an invaluable tool for Web scraping, and integrates seamlessly with many
