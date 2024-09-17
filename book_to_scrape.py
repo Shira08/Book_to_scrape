@@ -1,11 +1,10 @@
 import requests
 import csv
 import os
-import shutil
+from pathlib import Path
 from bs4 import BeautifulSoup
 
-# output_file = open("C:/Users/user/script/box/download_path/" + box_file.name, 'wb')
-#function to download, create a variable to get all images and loop it to download for each ategory
+# function to download image and save in right path
 def download_image(url, save_path):
     response = requests.get(url)
     with open(save_path, 'wb') as file:
@@ -22,7 +21,6 @@ lis_category = ul_category.find_all('li')  # Iterate over list items
 
 # Prepare dictionary to store results by category
 results_by_category = {}
-
 
 # Function for creating a new CSV file and writing results
 def create_and_write_csv(filename, data):
@@ -86,7 +84,7 @@ for li in lis_category:
                 product_image_url = soup1.find('div', {'class': 'item active'}).find("img").get('src').replace("../../",
                                                                                                                "https://books.toscrape.com/")
                 result['Product Image'] = product_image_url
-                images_urls = [result['Product Image']]
+              
 
                 # Extract product description
                 product_description_parent = soup1.find("article", {'class': 'product_page'})
@@ -108,13 +106,23 @@ for li in lis_category:
                         td_element = tr.find('td')
                         if th_element and td_element:
                             result[th_element.get_text(strip=True)] = td_element.get_text(strip=True)
-                # save_folder = '/chemin/complet/vers/dossier/sauvegarde/'
-                # file_name = 'image.jpg'
-                # save_as = os.path.join(save_folder, file_name)
-                # image_url = 'http://example.com/image.jpg'
-                #print(f"{images_urls})
-                # download_image(image_url, save_as)
-                # Append product result to the category's result list
+                save_folder = 'images'
+                folder_name = f'{category_name}_images'
+                folder_path = Path(os.path.join(save_folder, folder_name))
+                #create sub folder if not exists and create images if not exists
+                folder_path.mkdir(parents=True, exist_ok=True)
+                print(f'The folder name {folder_path} created or already exists.')
+
+                # Determine the next image index using 
+                existing_files = list(folder_path.glob('images_*.jpg'))
+                i = len(existing_files) + 1
+                img_name = f'images_{i}.jpg'
+                img_path = folder_path / img_name
+                
+                # Download image
+                download_image(result['Product Image'], img_path)
+                print(f"Image saved to {img_path}")
+              
                 if base_url_category not in results_by_category:
                     results_by_category[base_url_category] = []
                 results_by_category[base_url_category].append(result)
