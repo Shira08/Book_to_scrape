@@ -5,12 +5,14 @@
 
 > [!Important]
 > Specification to run this project
-- [ ] \(Optional) Open a followup issue
--[ ] Install python in your machine accordingly to your system. Click to find [Windows](https://www.python.org/downloads/windows/) 
--[ ] Install Beautifulsoup4 using **pip install beautifulsoup4**
-     Beautifulsoup is an invaluable tool for Web scraping, and integrates seamlessly with many
-     different XML and HTML parsers. Once you've identified the data you want to retrieve and 
-     understood the structure of the web page, you can use the Beautiful Soup Python library
-     to quickly write a script.
--[ ] Install Beautifulsoup4 using **pip install beautifulsoup4**
+> - [ ] \(Optional) Open a followup issue
+> - [ ] Install python in your machine accordingly to your system. Click to find [Windows](https://www.python.org/downloads/windows/) 
+> - [ ] Install Beautifulsoup4 using **pip install beautifulsoup4**
+>       Beautifulsoup is an invaluable tool for Web scraping, and integrates seamlessly with many
+>       different XML and HTML parsers. Once you've identified the data you want to retrieve and 
+>       understood the structure of the web page, you can use the Beautiful Soup Python library
+>       to quickly write a script.
+> - [ ] Install requests using **pip install requests**
+>       The requests library in Python is a popular and easy-to-use HTTP library that allows
+>       you to send HTTP requests and interact with web services.
 
