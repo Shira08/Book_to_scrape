@@ -4,7 +4,7 @@
 ### - secondly download images of each book and put in a folder per category  
 
 # **Specification to run this project**
-> [!Specification to run this project]
+> [!Important]
 > Key information users need to know to achieve their goal.
 
 -[ ] Install python in your machine accordingly to your system. Click to find [Windows](https://www.python.org/downloads/windows/) 
